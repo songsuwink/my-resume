@@ -16,9 +16,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import SchoolIcon from "@mui/icons-material/School";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+
 import "./App.css";
+import Routers from "./Routers";
+import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
 
 const drawerWidth = 240;
 
@@ -44,6 +50,8 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
+  boxShadow: "none",
+  backgroundColor: "#f5f5f5 !important",
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -67,6 +75,10 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
+const ListItemTextStyled = styled(ListItemText)({
+  "& .MuiTypography-root": { color: "#757575", fontWeight: "500" },
+});
+
 function App() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
@@ -82,10 +94,9 @@ function App() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -93,9 +104,6 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -112,72 +120,71 @@ function App() {
         open={open}
       >
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
+          <Grid
+            container
+            justifyContent="space-between"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item>
+              <Typography
+                variant="h5"
+                sx={{ marginLeft: 2, fontWeight: "600" }}
+              >
+                My Resume
+              </Typography>
+            </Grid>
+            <Grid item>
+              <IconButton onClick={handleDrawerClose}>
+                {theme.direction === "ltr" ? (
+                  <ChevronLeftIcon />
+                ) : (
+                  <ChevronRightIcon />
+                )}
+              </IconButton>
+            </Grid>
+          </Grid>
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem disablePadding component={Link} to="/">
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemTextStyled primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding component={Link} to="/about-me">
+            <ListItemButton>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemTextStyled primary="About" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding component={Link} to="/experience">
+            <ListItemButton>
+              <ListItemIcon>
+                <SchoolIcon />
+              </ListItemIcon>
+              <ListItemTextStyled primary="Experience" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding component={Link} to="/contact">
+            <ListItemButton>
+              <ListItemIcon>
+                <ChatBubbleIcon />
+              </ListItemIcon>
+              <ListItemTextStyled primary="Contact" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        <Routers />
+        <Box sx={{ marginBottom: "100px" }}></Box>
       </Main>
     </Box>
   );
