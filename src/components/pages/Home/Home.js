@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Chip, Grid, Typography } from "@mui/material";
+import { Box, Button, Chip, Grid, Typography } from "@mui/material";
 import ProfileHome1 from "../../images/ProfileHome1.jpg";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import CottageIcon from "@mui/icons-material/Cottage";
@@ -8,6 +8,20 @@ import About from "../About/About";
 import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
+import { styled } from "@mui/material/styles";
+import PDFCV from "./files/Songsuwin Kamhaeng.pdf";
+
+const ButtonStyled = styled(Button)({
+  borderRadius: "20px",
+  backgroundColor: "#FF4C60",
+  color: "#fff",
+  padding: "8px 24px",
+  fontWeight: "600",
+  "&:hover": {
+    backgroundColor: "#FF4C60",
+    color: "#fff",
+  },
+});
 
 function Home() {
   const [myAge, setMyAge] = useState(0);
@@ -175,6 +189,14 @@ function Home() {
                         </Typography>
                       </Grid>
                     </Grid>
+                  </Box>
+                  <Box sx={{ marginTop: "20px" }}>
+                    <ButtonStyled
+                      variant="contained"
+                      onClick={() => window.open(PDFCV)}
+                    >
+                      Download CV
+                    </ButtonStyled>
                   </Box>
                 </Box>
               </Grid>

@@ -18,7 +18,8 @@ const CardStyled = styled(Card)({
   padding: "16px",
   height: "100%",
   "& .MuiTypography-h5": {
-    fontWeight: "500",
+    fontWeight: "600",
+    fontSize: "22px",
     color: "#454360",
   },
   "& .MuiTypography-body2": {
