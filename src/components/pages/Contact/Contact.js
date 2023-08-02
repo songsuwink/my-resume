@@ -19,7 +19,7 @@ function Contact() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
         Contact
       </Typography>
       <Box sx={{ marginTop: "40px" }}>
@@ -33,8 +33,10 @@ function Contact() {
                   />
                 </Grid>
                 <Grid item xs={9} md={9} lg={9}>
-                  <Typography variant="h6">Email</Typography>
-                  <Typography variant="body1" sx={{ color: "#616161" }}>
+                  <Typography variant="h6" sx={{ color: "#454360" }}>
+                    Email
+                  </Typography>
+                  <Typography variant="body1" sx={{ color: "#5E5C7F" }}>
                     songsuwinkluey@gmail.com
                   </Typography>
                 </Grid>
@@ -50,8 +52,10 @@ function Contact() {
                   />
                 </Grid>
                 <Grid item xs={9} md={9} lg={9}>
-                  <Typography variant="h6">Facebook</Typography>
-                  <Typography variant="body1" sx={{ color: "#616161" }}>
+                  <Typography variant="h6" sx={{ color: "#454360" }}>
+                    Facebook
+                  </Typography>
+                  <Typography variant="body1" sx={{ color: "#5E5C7F" }}>
                     Songsuwin Kluey Kamhaeng
                   </Typography>
                 </Grid>

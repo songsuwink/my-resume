@@ -20,6 +20,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 
 import "./App.css";
 import Routers from "./Routers";
@@ -51,7 +52,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   boxShadow: "none",
-  backgroundColor: "#f5f5f5 !important",
+  backgroundColor: "#F9F9FF !important",
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -76,7 +77,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const ListItemTextStyled = styled(ListItemText)({
-  "& .MuiTypography-root": { color: "#757575", fontWeight: "500" },
+  "& .MuiTypography-root": { color: "#353353", fontWeight: "600" },
 });
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
+            backgroundColor: "#F9F9FF",
           },
         }}
         variant="persistent"
@@ -129,7 +131,7 @@ function App() {
             <Grid item>
               <Typography
                 variant="h5"
-                sx={{ marginLeft: 2, fontWeight: "600" }}
+                sx={{ marginLeft: 2, fontWeight: "600", color: "#353353" }}
               >
                 My Resume
               </Typography>
@@ -150,7 +152,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/">
             <ListItemButton>
               <ListItemIcon>
-                <HomeIcon />
+                <HomeIcon sx={{ color: "#353353" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Home" />
             </ListItemButton>
@@ -158,7 +160,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/about-me">
             <ListItemButton>
               <ListItemIcon>
-                <PersonIcon />
+                <PersonIcon sx={{ color: "#353353" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="About" />
             </ListItemButton>
@@ -166,15 +168,23 @@ function App() {
           <ListItem disablePadding component={Link} to="/experience">
             <ListItemButton>
               <ListItemIcon>
-                <SchoolIcon />
+                <SchoolIcon sx={{ color: "#353353" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Experience" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding component={Link} to="/portfolio">
+            <ListItemButton>
+              <ListItemIcon>
+                <AppRegistrationIcon sx={{ color: "#353353" }} />
+              </ListItemIcon>
+              <ListItemTextStyled primary="Portfolio" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding component={Link} to="/contact">
             <ListItemButton>
               <ListItemIcon>
-                <ChatBubbleIcon />
+                <ChatBubbleIcon sx={{ color: "#353353" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Contact" />
             </ListItemButton>

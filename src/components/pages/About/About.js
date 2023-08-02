@@ -9,13 +9,20 @@ import Js from "./images/javascript.png";
 import ReactImg from "./images/science.png";
 import SQL from "./images/big-data.png";
 import CSharp from "./images/c-sharp.png";
+import git from "./images/merge.png";
+import VisualStudio from "./images/visual-studio.png";
+import VisualStudioCode from "./images/visual-studio-code-1.png";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 const PaperSkillStyled = styled(Paper)({
   borderRadius: "20px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   backgroundColor: "#fff",
-  padding: "24px",
+  padding: "16px",
   height: "100%",
+  "& .MuiTypography-root": {
+    color: "#5E5C7F",
+  },
 });
 
 function About() {
@@ -25,7 +32,7 @@ function About() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
         About Me
       </Typography>
       <Box sx={{ marginTop: "40px" }}>
@@ -40,17 +47,44 @@ function About() {
             </Box>
           </Grid>
           <Grid item xs={12} md={8} lg={8}>
-            <Typography sx={{ fontSize: "18px" }}>
-              I am Songsuwin Kamhaeng, web developer from Rayong. I graduated in
-              Information Technology from Kasetsart University Sriracha Campus.
-              I have experience in website design and building responsive
-              website, I write CSS, HTML, JavaScript and ReactJS.
-            </Typography>
+            <Box
+              sx={{
+                backgroundColor: "#dedeea5e",
+                borderRadius: "10px",
+                padding: "32px 24px",
+              }}
+            >
+              <Typography>
+                <FormatQuoteIcon
+                  sx={{
+                    transform: "rotate(360deg) scaleX(-1)",
+                    fontSize: "40px",
+                  }}
+                />
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "18px",
+                  color: "#5E5C7F",
+                  marginTop: "8px",
+                  marginBottom: "16px",
+                }}
+                align="center"
+              >
+                I am Songsuwin Kamhaeng, web developer from Rayong. I graduated
+                in Information Technology from Kasetsart University Sriracha
+                Campus. I have experience in website design and building
+                responsive website, I write CSS, HTML, JavaScript and ReactJS.
+              </Typography>
+              <Typography align="right">
+                <FormatQuoteIcon sx={{ fontSize: "40px" }} />
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Box>
       <Box sx={{ marginTop: "80px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600" }}>
+        <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
           Skill
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
@@ -205,13 +239,92 @@ function About() {
                 </Grid>
               </PaperSkillStyled>
             </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <PaperSkillStyled>
+                <Grid container alignItems="center" spacing={2}>
+                  <Grid item xs={12} md={4} lg={4}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img
+                        src={git}
+                        alt="git"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={8} lg={8}>
+                    <Typography variant="h6" align="center">
+                      Git
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </PaperSkillStyled>
+            </Grid>
           </Grid>
         </Box>
       </Box>
       <Box sx={{ marginTop: "50px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600" }}>
+        <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
           Tools
         </Typography>
+        <Box sx={{ marginTop: "20px" }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3} lg={3}>
+              <PaperSkillStyled>
+                <Grid container alignItems="center" spacing={2}>
+                  <Grid item xs={12} md={4} lg={4}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img
+                        src={VisualStudio}
+                        alt="visual-studio"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={8} lg={8}>
+                    <Typography variant="h6" align="center">
+                      Visual Studio
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </PaperSkillStyled>
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <PaperSkillStyled>
+                <Grid container alignItems="center" spacing={2}>
+                  <Grid item xs={12} md={4} lg={4}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img
+                        src={VisualStudioCode}
+                        alt="visual-studio-code"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={8} lg={8}>
+                    <Typography variant="h6" align="center">
+                      Visual Studio Code
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </PaperSkillStyled>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
     </div>
   );

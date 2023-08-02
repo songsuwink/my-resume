@@ -9,6 +9,18 @@ const Experience = React.lazy(() =>
 );
 const About = React.lazy(() => import("./components/pages/About/About"));
 const Contact = React.lazy(() => import("./components/pages/Contact/Contact"));
+const Portfolio = React.lazy(() =>
+  import("./components/pages/Portfolio/Portfolio")
+);
+const ITStock_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/ITStock/Infomation")
+);
+const QAInspector_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/QAInspector/Information")
+);
+const PPEStock_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/PPEStock/Information")
+);
 
 function Routers() {
   return (
@@ -19,6 +31,10 @@ function Routers() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/about-me" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/itstock-info" element={<ITStock_Info />} />
+          <Route path="/qainspector-info" element={<QAInspector_Info />} />
+          <Route path="/ppestock-info" element={<PPEStock_Info />} />
         </Routes>
       </Suspense>
     </Container>

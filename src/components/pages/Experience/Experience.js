@@ -25,30 +25,30 @@ const useStyles = makeStyles({
     },
   },
   timelineYear: {
-    color: "#9e9e9e",
+    color: "#8B88B1",
     fontSize: "16px",
     marginBottom: "8px",
   },
   timelineType: {
-    color: "#000",
+    color: "#454360",
     fontSize: "22px",
     fontWeight: "600",
   },
   timelineDes: {
-    color: "#757575",
+    color: "#5E5C7F",
     fontSize: "17px",
   },
   gpa: {
-    color: "#757575",
+    color: "#5E5C7F",
     fontSize: "16px",
   },
   timelineEdu: {
-    color: "#757575",
+    color: "#5E5C7F",
     fontSize: "17px",
     marginBottom: "8px",
   },
   timelineCompany: {
-    color: "#757575",
+    color: "#5E5C7F",
     fontSize: "17px",
     marginBottom: "8px",
   },
@@ -69,7 +69,7 @@ function Experience() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
         Experience
       </Typography>
       <Box sx={{ marginTop: "24px" }}>
@@ -173,7 +173,7 @@ function Experience() {
                   </TimelineSeparator>
                   <TimelineContent>
                     <Typography className={classes.timelineYear}>
-                      2021 - present
+                      2021 - Present
                     </Typography>
                     <Typography className={classes.timelineType}>
                       Programmer
