@@ -13,6 +13,8 @@ import git from "./images/merge.png";
 import VisualStudio from "./images/visual-studio.png";
 import VisualStudioCode from "./images/visual-studio-code-1.png";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import Office from "./images/office.png";
+import Photoshop from "./images/photoshop.png";
 
 const PaperSkillStyled = styled(Paper)({
   borderRadius: "20px",
@@ -23,7 +25,46 @@ const PaperSkillStyled = styled(Paper)({
   "& .MuiTypography-root": {
     color: "#5E5C7F",
   },
+  display: "flex",
+  alignItems: "center",
 });
+
+const skills = [
+  {
+    id: 1,
+    name: "UX/UI Design",
+    image: UXUIDesign,
+  },
+  {
+    id: 2,
+    name: "CSS/HTML",
+    image: CSSHTML,
+  },
+  {
+    id: 3,
+    name: "Javascript",
+    image: Js,
+  },
+  {
+    id: 4,
+    name: "React",
+    image: ReactImg,
+  },
+  { id: 5, name: "SQL", image: SQL },
+  { id: 6, name: "ASP.NET (C#)", image: CSharp },
+  { id: 7, name: "Git", image: git },
+];
+
+const tools = [
+  {
+    id: 1,
+    name: "Visual Studio",
+    image: VisualStudio,
+  },
+  { id: 2, name: "Visual Studio Code", image: VisualStudioCode },
+  { id: 3, name: "Microsoft Office", image: Office },
+  { id: 4, name: "Adobe Photoshop", image: Photoshop },
+];
 
 function About() {
   useEffect(() => {
@@ -38,7 +79,7 @@ function About() {
       <Box sx={{ marginTop: "40px" }}>
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={4} lg={4}>
-            <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Avatar
                 alt="Profile1"
                 src={Profile1}
@@ -89,181 +130,36 @@ function About() {
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={UXUIDesign}
-                        alt="uxui-design"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
+            {skills.map((item) => (
+              <Grid item xs={12} md={3} lg={3} key={item.id}>
+                <PaperSkillStyled>
+                  <Grid container alignItems="center" spacing={2}>
+                    <Grid item xs={12} md={4} lg={4}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={item.image}
+                          alt="image"
+                          style={{ width: "45px", height: "45px" }}
+                        />
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={8} lg={8}>
+                      <Typography
+                        align="center"
+                        sx={{ fontSize: "1.1rem", fontWeight: "500" }}
+                      >
+                        {item.name}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      UX/UI Design
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={CSSHTML}
-                        alt="css-html"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      CSS/HTML
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={Js}
-                        alt="js"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      Javascript
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={ReactImg}
-                        alt="react"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      React
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={SQL}
-                        alt="sql"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      SQL
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={CSharp}
-                        alt="C#"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      ASP.NET (C#)
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={git}
-                        alt="git"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      Git
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
+                </PaperSkillStyled>
+              </Grid>
+            ))}
           </Grid>
         </Box>
       </Box>
@@ -273,56 +169,36 @@ function About() {
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={VisualStudio}
-                        alt="visual-studio"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
+            {tools.map((item) => (
+              <Grid item xs={12} md={3} lg={3} key={item.id}>
+                <PaperSkillStyled>
+                  <Grid container alignItems="center">
+                    <Grid item xs={12} md={4} lg={4}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={item.image}
+                          alt="image"
+                          style={{ width: "45px", height: "45px" }}
+                        />
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={8} lg={8}>
+                      <Typography
+                        align="center"
+                        sx={{ fontSize: "1.1rem", fontWeight: "500" }}
+                      >
+                        {item.name}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      Visual Studio
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <PaperSkillStyled>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={4} lg={4}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={VisualStudioCode}
-                        alt="visual-studio-code"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={8} lg={8}>
-                    <Typography variant="h6" align="center">
-                      Visual Studio Code
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </PaperSkillStyled>
-            </Grid>
+                </PaperSkillStyled>
+              </Grid>
+            ))}
           </Grid>
         </Box>
       </Box>

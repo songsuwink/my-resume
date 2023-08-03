@@ -149,7 +149,7 @@ function Experience() {
                   </TimelineSeparator>
                   <TimelineContent>
                     <Typography className={classes.timelineYear}>
-                      2019 - 2021
+                      2018 - 2021
                     </Typography>
                     <Typography className={classes.timelineType}>
                       Programmer

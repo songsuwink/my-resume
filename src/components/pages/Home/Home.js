@@ -9,7 +9,7 @@ import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
 import { styled } from "@mui/material/styles";
-import PDFCV from "./files/Songsuwin Kamhaeng.pdf";
+import PDFCV from "./files/Songsuwin_Kamhaeng_CV.pdf";
 
 const ButtonStyled = styled(Button)({
   borderRadius: "20px",
@@ -25,10 +25,9 @@ const ButtonStyled = styled(Button)({
 
 function Home() {
   const [myAge, setMyAge] = useState(0);
+  const [myExp, setMyExp] = useState("");
 
-  useEffect(() => {
-    document.title = "Home - My Resume | Songsuwin Kamhaeng";
-
+  const calAge = () => {
     var today = new Date();
     var birthDate = new Date("1995/03/24");
     var age = today.getFullYear() - birthDate.getFullYear();
@@ -38,6 +37,27 @@ function Home() {
     }
 
     setMyAge(age);
+  };
+
+  const calExp = () => {
+    const birthDate = new Date("2018-05-15");
+    const currentDate = new Date();
+
+    const yearsDiff = currentDate.getFullYear() - birthDate.getFullYear();
+    const monthsDiff = currentDate.getMonth() - birthDate.getMonth();
+
+    if (monthsDiff < 0) {
+      yearsDiff--;
+      monthsDiff += 12;
+    }
+
+    setMyExp(`${yearsDiff}Y / ${monthsDiff}M`);
+  };
+
+  useEffect(() => {
+    document.title = "Home - My Resume | Songsuwin Kamhaeng";
+    calAge();
+    calExp();
   }, []);
 
   return (
@@ -163,7 +183,7 @@ function Home() {
                           }}
                           gutterBottom
                         >
-                          22/2 Sunthornphu 7, Soi Ariyakun, Thang Kwain, Klaeng,
+                          22/2 Sunthonphu 7, Soi Ariyakun, Thang Kwain, Klaeng,
                           Rayong 21110
                         </Typography>
                       </Grid>
@@ -186,6 +206,27 @@ function Home() {
                           gutterBottom
                         >
                           songsuwinkluey@gmail.com
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={2}>
+                      <Grid item xs={4}>
+                        <Typography
+                          sx={{ color: "#454360", fontWeight: "600" }}
+                        >
+                          Work Experience (Year)
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={8}>
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            color: "#5E5C7F",
+                          }}
+                          gutterBottom
+                        >
+                          {myExp}
                         </Typography>
                       </Grid>
                     </Grid>

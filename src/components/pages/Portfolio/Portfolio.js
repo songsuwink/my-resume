@@ -4,6 +4,8 @@ import { Box, Grid, Typography } from "@mui/material";
 import ITStock from "./ITStock/ITStock";
 import QAInspector from "./QAInspector/QAInspector";
 import PPEStock from "./PPEStock/PPEStock";
+import OKRs from "./Okrs/Okrs";
+import Learning from "./Learning/Learning";
 
 function Portfolio() {
   useEffect(() => {
@@ -28,6 +30,12 @@ function Portfolio() {
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <PPEStock />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <OKRs />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <Learning />
           </Grid>
         </Grid>
       </Box>

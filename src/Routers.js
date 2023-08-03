@@ -21,6 +21,12 @@ const QAInspector_Info = React.lazy(() =>
 const PPEStock_Info = React.lazy(() =>
   import("./components/pages/Portfolio/PPEStock/Information")
 );
+const OKRs_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/Okrs/Information")
+);
+const Learning_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/Learning/Information")
+);
 
 function Routers() {
   return (
@@ -35,6 +41,8 @@ function Routers() {
           <Route path="/itstock-info" element={<ITStock_Info />} />
           <Route path="/qainspector-info" element={<QAInspector_Info />} />
           <Route path="/ppestock-info" element={<PPEStock_Info />} />
+          <Route path="/okrs-info" element={<OKRs_Info />} />
+          <Route path="/learning-info" element={<Learning_Info />} />
         </Routes>
       </Suspense>
     </Container>
