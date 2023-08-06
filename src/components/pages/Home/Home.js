@@ -9,7 +9,7 @@ import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
 import { styled } from "@mui/material/styles";
-import PDFCV from "./files/Songsuwin_Kamhaeng_CV.pdf";
+import PDFCV from "./files/Songsuwin_Kamhaeng_Resume.pdf";
 
 const ButtonStyled = styled(Button)({
   borderRadius: "20px",
@@ -214,7 +214,7 @@ function Home() {
                         <Typography
                           sx={{ color: "#454360", fontWeight: "600" }}
                         >
-                          Work Experience (Year)
+                          Work Experience
                         </Typography>
                       </Grid>
                       <Grid item xs={8}>
