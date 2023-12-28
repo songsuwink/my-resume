@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
-import image1 from "./images/1.png";
-import image2 from "./images/2.png";
-import image3 from "./images/3.png";
-import image4 from "./images/4.png";
-import image5 from "./images/5.png";
-import image6 from "./images/6.png";
-import image7 from "./images/7.png";
+import image1 from "./images/dwc1.png";
+import image2 from "./images/dwc2.png";
+import image3 from "./images/dwc3.png";
+import image4 from "./images/dwc4.png";
+import image5 from "./images/dwc5.png";
+import image6 from "./images/dwc6.png";
+import image7 from "./images/dwc7.png";
 
 import { Box, Grid, Typography } from "@mui/material";
 import "../styles.css";
