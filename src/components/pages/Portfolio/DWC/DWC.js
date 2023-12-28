@@ -9,7 +9,7 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
-import image1 from "./images/2.png";
+import image1 from "./images/dwc2.png";
 
 const CardStyled = styled(Card)({
   borderRadius: "20px",
