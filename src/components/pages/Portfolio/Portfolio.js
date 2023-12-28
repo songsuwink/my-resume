@@ -6,6 +6,7 @@ import QAInspector from "./QAInspector/QAInspector";
 import PPEStock from "./PPEStock/PPEStock";
 import OKRs from "./Okrs/Okrs";
 import Learning from "./Learning/Learning";
+import DWC from "./DWC/DWC";
 
 function Portfolio() {
   useEffect(() => {
@@ -36,6 +37,9 @@ function Portfolio() {
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <Learning />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <DWC />
           </Grid>
         </Grid>
       </Box>

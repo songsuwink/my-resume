@@ -27,6 +27,9 @@ const OKRs_Info = React.lazy(() =>
 const Learning_Info = React.lazy(() =>
   import("./components/pages/Portfolio/Learning/Information")
 );
+const DWC_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/DWC/Information")
+);
 
 function Routers() {
   return (
@@ -43,6 +46,7 @@ function Routers() {
           <Route path="/ppestock-info" element={<PPEStock_Info />} />
           <Route path="/okrs-info" element={<OKRs_Info />} />
           <Route path="/learning-info" element={<Learning_Info />} />
+          <Route path="/dwc-info" element={<DWC_Info />} />
         </Routes>
       </Suspense>
     </Container>
