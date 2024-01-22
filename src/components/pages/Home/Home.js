@@ -40,11 +40,11 @@ function Home() {
   };
 
   const calExp = () => {
-    const birthDate = new Date("2018-05-15");
-    const currentDate = new Date();
+    let birthDate = new Date("2018-05-15");
+    let currentDate = new Date();
 
-    const yearsDiff = currentDate.getFullYear() - birthDate.getFullYear();
-    const monthsDiff = currentDate.getMonth() - birthDate.getMonth();
+    let yearsDiff = currentDate.getFullYear() - birthDate.getFullYear();
+    let monthsDiff = currentDate.getMonth() - birthDate.getMonth();
 
     if (monthsDiff < 0) {
       yearsDiff--;

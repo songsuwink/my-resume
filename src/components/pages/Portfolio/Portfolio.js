@@ -7,6 +7,7 @@ import PPEStock from "./PPEStock/PPEStock";
 import OKRs from "./Okrs/Okrs";
 import Learning from "./Learning/Learning";
 import DWC from "./DWC/DWC";
+import HNY from "./HNY/HNY";
 
 function Portfolio() {
   useEffect(() => {
@@ -40,6 +41,9 @@ function Portfolio() {
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <DWC />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <HNY />
           </Grid>
         </Grid>
       </Box>
