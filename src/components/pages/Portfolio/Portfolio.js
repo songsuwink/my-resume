@@ -16,7 +16,7 @@ function Portfolio() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
         Portfolio
       </Typography>
       <Typography variant="body1" sx={{ color: "#8B88B1" }}>

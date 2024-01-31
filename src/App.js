@@ -52,7 +52,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   boxShadow: "none",
-  backgroundColor: "#F9F9FF !important",
+  backgroundColor: "#353353 !important",
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -77,7 +77,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const ListItemTextStyled = styled(ListItemText)({
-  "& .MuiTypography-root": { color: "#353353", fontWeight: "600" },
+  "& .MuiTypography-root": { color: "#fff", fontWeight: "600" },
 });
 
 function App() {
@@ -95,7 +95,7 @@ function App() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#353353" }}>
         <Toolbar>
           <IconButton
             aria-label="open drawer"
@@ -103,7 +103,7 @@ function App() {
             edge="start"
             sx={{ mr: 2, ...(open && { display: "none" }) }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: "#fff" }} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -114,7 +114,7 @@ function App() {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
-            backgroundColor: "#F9F9FF",
+            backgroundColor: "#353353",
           },
         }}
         variant="persistent"
@@ -131,7 +131,7 @@ function App() {
             <Grid item>
               <Typography
                 variant="h5"
-                sx={{ marginLeft: 2, fontWeight: "600", color: "#353353" }}
+                sx={{ marginLeft: 2, fontWeight: "600", color: "#fff" }}
               >
                 My Resume
               </Typography>
@@ -139,9 +139,9 @@ function App() {
             <Grid item>
               <IconButton onClick={handleDrawerClose}>
                 {theme.direction === "ltr" ? (
-                  <ChevronLeftIcon />
+                  <ChevronLeftIcon sx={{ color: "#fff" }} />
                 ) : (
-                  <ChevronRightIcon />
+                  <ChevronRightIcon sx={{ color: "#fff" }} />
                 )}
               </IconButton>
             </Grid>
@@ -152,7 +152,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/">
             <ListItemButton>
               <ListItemIcon>
-                <HomeIcon sx={{ color: "#353353" }} />
+                <HomeIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Home" />
             </ListItemButton>
@@ -160,7 +160,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/about-me">
             <ListItemButton>
               <ListItemIcon>
-                <PersonIcon sx={{ color: "#353353" }} />
+                <PersonIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="About" />
             </ListItemButton>
@@ -168,7 +168,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/experience">
             <ListItemButton>
               <ListItemIcon>
-                <SchoolIcon sx={{ color: "#353353" }} />
+                <SchoolIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Experience" />
             </ListItemButton>
@@ -176,7 +176,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/portfolio">
             <ListItemButton>
               <ListItemIcon>
-                <AppRegistrationIcon sx={{ color: "#353353" }} />
+                <AppRegistrationIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Portfolio" />
             </ListItemButton>
@@ -184,7 +184,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/contact">
             <ListItemButton>
               <ListItemIcon>
-                <ChatBubbleIcon sx={{ color: "#353353" }} />
+                <ChatBubbleIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Contact" />
             </ListItemButton>

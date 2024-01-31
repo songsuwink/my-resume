@@ -12,6 +12,7 @@ import makeStyles from "@mui/styles/makeStyles";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 
 const PaperStyled = styled(Paper)({
+  backgroundColor: "#302f4e",
   borderRadius: "20px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   padding: "24px",
@@ -30,25 +31,25 @@ const useStyles = makeStyles({
     marginBottom: "8px",
   },
   timelineType: {
-    color: "#454360",
+    color: "#fff",
     fontSize: "22px",
     fontWeight: "600",
   },
   timelineDes: {
-    color: "#5E5C7F",
+    color: "#fff",
     fontSize: "17px",
   },
   gpa: {
-    color: "#5E5C7F",
+    color: "#fff",
     fontSize: "16px",
   },
   timelineEdu: {
-    color: "#5E5C7F",
+    color: "#fff",
     fontSize: "17px",
     marginBottom: "8px",
   },
   timelineCompany: {
-    color: "#5E5C7F",
+    color: "#fff",
     fontSize: "17px",
     marginBottom: "8px",
   },
@@ -69,7 +70,7 @@ function Experience() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
         Experience
       </Typography>
       <Box sx={{ marginTop: "24px" }}>
@@ -158,7 +159,7 @@ function Experience() {
                       Yokohama Tire Manufacturing (Thailand) Co.,Ltd.
                     </Typography>
                     <Typography className={classes.timelineDes}>
-                      Developed web application for production line in ASP.NET
+                      Developed web application for production line with ASP.NET
                       C#
                     </Typography>
                     <Box sx={{ marginBottom: "40px" }}></Box>
@@ -182,7 +183,7 @@ function Experience() {
                       Thai Polyethylene Co., Ltd. (TPE)
                     </Typography>
                     <Typography className={classes.timelineDes}>
-                      Developed web application HR Management in React.js
+                      Developed web application HR Management with React.js
                     </Typography>
                     <Box sx={{ marginBottom: "40px" }}></Box>
                   </TimelineContent>

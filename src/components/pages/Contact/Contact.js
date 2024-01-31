@@ -19,7 +19,7 @@ function Contact() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
         Contact
       </Typography>
       <Box sx={{ marginTop: "40px" }}>

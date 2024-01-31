@@ -12,7 +12,7 @@ import {
 import image1 from "./images/learning1.png";
 
 const CardStyled = styled(Card)({
-  borderRadius: "20px",
+  borderRadius: "15px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   backgroundColor: "#fff",
   padding: "16px",

@@ -17,7 +17,7 @@ import Office from "./images/office.png";
 import Photoshop from "./images/photoshop.png";
 
 const PaperSkillStyled = styled(Paper)({
-  borderRadius: "20px",
+  borderRadius: "15px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   backgroundColor: "#fff",
   padding: "16px",
@@ -73,7 +73,7 @@ function About() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
         About Me
       </Typography>
       <Box sx={{ marginTop: "40px" }}>
@@ -90,7 +90,7 @@ function About() {
           <Grid item xs={12} md={8} lg={8}>
             <Box
               sx={{
-                backgroundColor: "#dedeea5e",
+                backgroundColor: "#fff",
                 borderRadius: "10px",
                 padding: "32px 24px",
               }}
@@ -125,7 +125,7 @@ function About() {
         </Grid>
       </Box>
       <Box sx={{ marginTop: "80px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+        <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
           Skill
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
@@ -164,7 +164,7 @@ function About() {
         </Box>
       </Box>
       <Box sx={{ marginTop: "50px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+        <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
           Tools
         </Typography>
         <Box sx={{ marginTop: "20px" }}>

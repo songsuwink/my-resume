@@ -63,7 +63,7 @@ function Home() {
   return (
     <div>
       <Box>
-        <Grid container spacing={2}>
+        <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={3} lg={3}>
             <img
               src={ProfileHome1}
@@ -75,7 +75,7 @@ function Home() {
             <Grid container justifyContent="center">
               <Grid item xs={12} md={10} lg={10}>
                 <Typography
-                  sx={{ fontWeight: "700", fontSize: "3em", color: "#454360" }}
+                  sx={{ fontWeight: "700", fontSize: "3em", color: "#fff" }}
                 >
                   Hello,
                 </Typography>
@@ -83,7 +83,7 @@ function Home() {
                   sx={{
                     fontWeight: "600",
                     fontSize: "1.5em",
-                    color: "#5E5C7F",
+                    color: "#fff",
                   }}
                 >
                   I'm Songsuwin Kamhaeng
@@ -100,6 +100,7 @@ function Home() {
                       marginRight: "10px",
                       backgroundColor: "#DEDEEA",
                       color: "#5E5C7F",
+                      fontWeight: "500",
                     }}
                   />
                   <Chip
@@ -113,13 +114,14 @@ function Home() {
                       marginRight: "10px",
                       backgroundColor: "#DEDEEA",
                       color: "#5E5C7F",
+                      fontWeight: "500",
                     }}
                   />
                 </Box>
                 <Box sx={{ marginTop: "40px" }}>
                   <Box
                     sx={{
-                      backgroundColor: "#dedeea5e",
+                      backgroundColor: "#fff",
                       borderRadius: "10px",
                       padding: "32px 24px",
                     }}
