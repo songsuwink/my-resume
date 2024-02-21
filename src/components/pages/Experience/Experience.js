@@ -12,7 +12,7 @@ import makeStyles from "@mui/styles/makeStyles";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 
 const PaperStyled = styled(Paper)({
-  backgroundColor: "#302f4e",
+  backgroundColor: "#fafafa",
   borderRadius: "20px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   padding: "24px",
@@ -26,36 +26,36 @@ const useStyles = makeStyles({
     },
   },
   timelineYear: {
-    color: "#8B88B1",
-    fontSize: "16px",
+    color: "grey",
+    fontSize: "14px",
     marginBottom: "8px",
   },
   timelineType: {
-    color: "#fff",
-    fontSize: "22px",
+    color: "#212121",
+    fontSize: "20px",
     fontWeight: "600",
   },
   timelineDes: {
-    color: "#fff",
-    fontSize: "17px",
+    color: "#212121",
+    fontSize: "15px",
   },
   gpa: {
-    color: "#fff",
-    fontSize: "16px",
+    color: "#212121",
+    fontSize: "14px",
   },
   timelineEdu: {
-    color: "#fff",
-    fontSize: "17px",
+    color: "#212121",
+    fontSize: "15px",
     marginBottom: "8px",
   },
   timelineCompany: {
-    color: "#fff",
-    fontSize: "17px",
+    color: "#212121",
+    fontSize: "15px",
     marginBottom: "8px",
   },
   educationIcon: {
     color: "#FF4C60",
-    fontSize: "30px",
+    fontSize: "28px",
     marginTop: "5px",
     marginBottom: "5px",
   },
@@ -70,8 +70,8 @@ function Experience() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
-        Experience
+      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+        # Experience
       </Typography>
       <Box sx={{ marginTop: "24px" }}>
         <Grid container spacing={4}>

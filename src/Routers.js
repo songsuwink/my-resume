@@ -37,7 +37,7 @@ const HNY_Info = React.lazy(() =>
 function Routers() {
   return (
     <Container maxWidth="lg">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div style={{ color: "#fff" }}>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/experience" element={<Experience />} />

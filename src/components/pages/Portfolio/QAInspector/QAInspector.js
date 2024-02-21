@@ -15,22 +15,21 @@ const CardStyled = styled(Card)({
   borderRadius: "15px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   backgroundColor: "#fff",
-  padding: "16px",
   height: "100%",
   "& .MuiTypography-h5": {
     fontWeight: "600",
     fontSize: "22px",
-    color: "#454360",
+    color: "#212121",
   },
   "& .MuiTypography-body2": {
-    color: "#8B88B1",
+    color: "grey",
   },
 });
 
 const ChipStyled = styled(Chip)({
   backgroundColor: "#eeeeee",
   color: "#757575",
-  borderRadius: "10px",
+  borderRadius: "5px",
   marginRight: "8px",
 });
 
@@ -42,11 +41,11 @@ function QAInspector() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="150"
           image={image1}
           alt="card image"
         />
-        <CardContent sx={{ height: "100%" }}>
+        <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             QA Inspector
           </Typography>
@@ -57,8 +56,8 @@ function QAInspector() {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "20px" }}>
-            <ChipStyled label="ASP.NET" />
-            <ChipStyled label="C#" />
+            <ChipStyled label="ASP.NET" size="small" />
+            <ChipStyled label="C#" size="small" />
           </Box>
         </CardContent>
       </CardActionArea>

@@ -15,22 +15,21 @@ const CardStyled = styled(Card)({
   borderRadius: "15px",
   boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
   backgroundColor: "#fff",
-  padding: "16px",
   height: "100%",
   "& .MuiTypography-h5": {
     fontWeight: "600",
     fontSize: "22px",
-    color: "#454360",
+    color: "#212121",
   },
   "& .MuiTypography-body2": {
-    color: "#8B88B1",
+    color: "grey",
   },
 });
 
 const ChipStyled = styled(Chip)({
   backgroundColor: "#eeeeee",
   color: "#757575",
-  borderRadius: "10px",
+  borderRadius: "5px",
   marginRight: "8px",
 });
 
@@ -46,18 +45,20 @@ function Learning() {
           image={image1}
           alt="card image"
         />
-        <CardContent sx={{ height: "100%" }}>
-          <Typography gutterBottom variant="h5" component="div">
-            Learning
-          </Typography>
-          <Box sx={{ height: "60px" }}>
-            <Typography variant="body2" color="text.secondary">
-              Web application for HR management.
+        <CardContent>
+          <Box sx={{ height: "100px" }}>
+            <Typography gutterBottom variant="h5" component="div">
+              Learning
             </Typography>
+            <Box sx={{ height: "60px" }}>
+              <Typography variant="body2" color="text.secondary">
+                Web application for HR management.
+              </Typography>
+            </Box>
           </Box>
           <Box sx={{ marginTop: "20px" }}>
-            <ChipStyled label="React" />
-            <ChipStyled label="Javascript" />
+            <ChipStyled label="React" size="small" />
+            <ChipStyled label="Javascript" size="small" />
           </Box>
         </CardContent>
       </CardActionArea>

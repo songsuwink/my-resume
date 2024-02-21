@@ -40,7 +40,7 @@ function Home() {
   };
 
   const calExp = () => {
-    let birthDate = new Date("2018-05-15");
+    let birthDate = new Date("2018-11-01");
     let currentDate = new Date();
 
     let yearsDiff = currentDate.getFullYear() - birthDate.getFullYear();
@@ -75,7 +75,7 @@ function Home() {
             <Grid container justifyContent="center">
               <Grid item xs={12} md={10} lg={10}>
                 <Typography
-                  sx={{ fontWeight: "700", fontSize: "3em", color: "#fff" }}
+                  sx={{ fontWeight: "700", fontSize: "3em", color: "#212121" }}
                 >
                   Hello,
                 </Typography>
@@ -83,7 +83,7 @@ function Home() {
                   sx={{
                     fontWeight: "600",
                     fontSize: "1.5em",
-                    color: "#fff",
+                    color: "#212121",
                   }}
                 >
                   I'm Songsuwin Kamhaeng
@@ -92,28 +92,28 @@ function Home() {
                   <Chip
                     icon={
                       <FiberManualRecordIcon
-                        sx={{ color: "#454360 !important" }}
+                        sx={{ color: "#536dfe !important", fontSize: "1.2rem" }}
                       />
                     }
                     label="Programmer"
                     sx={{
                       marginRight: "10px",
-                      backgroundColor: "#DEDEEA",
-                      color: "#5E5C7F",
+                      backgroundColor: "#e8eaf6",
+                      color: "#536dfe",
                       fontWeight: "500",
                     }}
                   />
                   <Chip
                     icon={
                       <FiberManualRecordIcon
-                        sx={{ color: "#454360 !important" }}
+                        sx={{ color: "#536dfe !important", fontSize: "1.2rem" }}
                       />
                     }
                     label="Web Developer"
                     sx={{
                       marginRight: "10px",
-                      backgroundColor: "#DEDEEA",
-                      color: "#5E5C7F",
+                      backgroundColor: "#e8eaf6",
+                      color: "#536dfe",
                       fontWeight: "500",
                     }}
                   />
@@ -121,25 +121,24 @@ function Home() {
                 <Box sx={{ marginTop: "40px" }}>
                   <Box
                     sx={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
+                      backgroundColor: "#fafafa",
+                      borderRadius: "20px",
+                      boxShadow:
+                        "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                       padding: "32px 24px",
                     }}
                   >
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
-                        <Typography
-                          sx={{ color: "#454360", fontWeight: "600" }}
-                        >
-                          Nickname
-                        </Typography>
+                        <Typography sx={{ color: "grey" }}>Nickname</Typography>
                       </Grid>
                       <Grid item xs={8}>
                         <Typography
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            color: "#5E5C7F",
+                            color: "#212121",
+                            fontWeight: "500",
                           }}
                           gutterBottom
                         >
@@ -149,18 +148,15 @@ function Home() {
                     </Grid>
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
-                        <Typography
-                          sx={{ color: "#454360", fontWeight: "600" }}
-                        >
-                          Age
-                        </Typography>
+                        <Typography sx={{ color: "grey" }}>Age</Typography>
                       </Grid>
                       <Grid item xs={8}>
                         <Typography
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            color: "#5E5C7F",
+                            color: "#212121",
+                            fontWeight: "500",
                           }}
                           gutterBottom
                         >
@@ -170,18 +166,15 @@ function Home() {
                     </Grid>
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
-                        <Typography
-                          sx={{ color: "#454360", fontWeight: "600" }}
-                        >
-                          Address
-                        </Typography>
+                        <Typography sx={{ color: "grey" }}>Address</Typography>
                       </Grid>
                       <Grid item xs={8}>
                         <Typography
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            color: "#5E5C7F",
+                            color: "#212121",
+                            fontWeight: "500",
                           }}
                           gutterBottom
                         >
@@ -192,18 +185,15 @@ function Home() {
                     </Grid>
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
-                        <Typography
-                          sx={{ color: "#454360", fontWeight: "600" }}
-                        >
-                          Email
-                        </Typography>
+                        <Typography sx={{ color: "grey" }}>Email</Typography>
                       </Grid>
                       <Grid item xs={8}>
                         <Typography
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            color: "#5E5C7F",
+                            color: "#212121",
+                            fontWeight: "500",
                           }}
                           gutterBottom
                         >
@@ -213,9 +203,7 @@ function Home() {
                     </Grid>
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
-                        <Typography
-                          sx={{ color: "#454360", fontWeight: "600" }}
-                        >
+                        <Typography sx={{ color: "grey" }}>
                           Work Experience
                         </Typography>
                       </Grid>
@@ -224,7 +212,8 @@ function Home() {
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            color: "#5E5C7F",
+                            color: "#212121",
+                            fontWeight: "500",
                           }}
                           gutterBottom
                         >

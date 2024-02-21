@@ -52,7 +52,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   boxShadow: "none",
-  backgroundColor: "#353353 !important",
+  backgroundColor: "#fff !important",
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -77,7 +77,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const ListItemTextStyled = styled(ListItemText)({
-  "& .MuiTypography-root": { color: "#fff", fontWeight: "600" },
+  "& .MuiTypography-root": { color: "grey", fontWeight: "500" },
 });
 
 function App() {
@@ -95,7 +95,7 @@ function App() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#353353" }}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
         <Toolbar>
           <IconButton
             aria-label="open drawer"
@@ -103,7 +103,7 @@ function App() {
             edge="start"
             sx={{ mr: 2, ...(open && { display: "none" }) }}
           >
-            <MenuIcon sx={{ color: "#fff" }} />
+            <MenuIcon sx={{ color: "#111B3F" }} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -114,7 +114,7 @@ function App() {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
-            backgroundColor: "#353353",
+            backgroundColor: "#fff",
           },
         }}
         variant="persistent"
@@ -131,7 +131,7 @@ function App() {
             <Grid item>
               <Typography
                 variant="h5"
-                sx={{ marginLeft: 2, fontWeight: "600", color: "#fff" }}
+                sx={{ marginLeft: 2, fontWeight: "600", color: "#212121" }}
               >
                 My Resume
               </Typography>
@@ -139,9 +139,9 @@ function App() {
             <Grid item>
               <IconButton onClick={handleDrawerClose}>
                 {theme.direction === "ltr" ? (
-                  <ChevronLeftIcon sx={{ color: "#fff" }} />
+                  <ChevronLeftIcon sx={{ color: "#212121" }} />
                 ) : (
-                  <ChevronRightIcon sx={{ color: "#fff" }} />
+                  <ChevronRightIcon sx={{ color: "#212121" }} />
                 )}
               </IconButton>
             </Grid>
@@ -152,7 +152,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/">
             <ListItemButton>
               <ListItemIcon>
-                <HomeIcon sx={{ color: "#fff" }} />
+                <HomeIcon sx={{ color: "grey" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Home" />
             </ListItemButton>
@@ -160,7 +160,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/about-me">
             <ListItemButton>
               <ListItemIcon>
-                <PersonIcon sx={{ color: "#fff" }} />
+                <PersonIcon sx={{ color: "grey" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="About" />
             </ListItemButton>
@@ -168,7 +168,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/experience">
             <ListItemButton>
               <ListItemIcon>
-                <SchoolIcon sx={{ color: "#fff" }} />
+                <SchoolIcon sx={{ color: "grey" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Experience" />
             </ListItemButton>
@@ -176,7 +176,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/portfolio">
             <ListItemButton>
               <ListItemIcon>
-                <AppRegistrationIcon sx={{ color: "#fff" }} />
+                <AppRegistrationIcon sx={{ color: "grey" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Portfolio" />
             </ListItemButton>
@@ -184,7 +184,7 @@ function App() {
           <ListItem disablePadding component={Link} to="/contact">
             <ListItemButton>
               <ListItemIcon>
-                <ChatBubbleIcon sx={{ color: "#fff" }} />
+                <ChatBubbleIcon sx={{ color: "grey" }} />
               </ListItemIcon>
               <ListItemTextStyled primary="Contact" />
             </ListItemButton>

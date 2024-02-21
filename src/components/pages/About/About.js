@@ -18,12 +18,13 @@ import Photoshop from "./images/photoshop.png";
 
 const PaperSkillStyled = styled(Paper)({
   borderRadius: "15px",
-  boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
+  boxShadow:
+    "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
   backgroundColor: "#fff",
   padding: "16px",
   height: "100%",
   "& .MuiTypography-root": {
-    color: "#5E5C7F",
+    color: "#212121",
   },
   display: "flex",
   alignItems: "center",
@@ -73,8 +74,8 @@ function About() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
-        About Me
+      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+        # About Me
       </Typography>
       <Box sx={{ marginTop: "40px" }}>
         <Grid container justifyContent="center" spacing={2}>
@@ -90,8 +91,8 @@ function About() {
           <Grid item xs={12} md={8} lg={8}>
             <Box
               sx={{
-                backgroundColor: "#fff",
-                borderRadius: "10px",
+                backgroundColor: "#fafafa",
+                borderRadius: "20px",
                 padding: "32px 24px",
               }}
             >
@@ -106,11 +107,14 @@ function About() {
               <Typography
                 sx={{
                   fontSize: "18px",
-                  color: "#5E5C7F",
+                  textWrap: "wrap",
+                  color: "#212121",
+                  fontWeight: "500",
                   marginTop: "8px",
                   marginBottom: "16px",
+                  paddingLeft: "32px",
+                  paddingRight: "32px",
                 }}
-                align="center"
               >
                 I am Songsuwin Kamhaeng, web developer from Rayong. I graduated
                 in Information Technology from Kasetsart University Sriracha
@@ -125,7 +129,7 @@ function About() {
         </Grid>
       </Box>
       <Box sx={{ marginTop: "80px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
+        <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
           Skill
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
@@ -144,14 +148,14 @@ function About() {
                         <img
                           src={item.image}
                           alt="image"
-                          style={{ width: "45px", height: "45px" }}
+                          style={{ width: "35px", height: "35px" }}
                         />
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={8} lg={8}>
                       <Typography
                         align="center"
-                        sx={{ fontSize: "1.1rem", fontWeight: "500" }}
+                        sx={{ fontSize: "1rem", fontWeight: "500" }}
                       >
                         {item.name}
                       </Typography>
@@ -164,7 +168,7 @@ function About() {
         </Box>
       </Box>
       <Box sx={{ marginTop: "50px" }}>
-        <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
+        <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
           Tools
         </Typography>
         <Box sx={{ marginTop: "20px" }}>
@@ -183,14 +187,14 @@ function About() {
                         <img
                           src={item.image}
                           alt="image"
-                          style={{ width: "45px", height: "45px" }}
+                          style={{ width: "35px", height: "35px" }}
                         />
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={8} lg={8}>
                       <Typography
                         align="center"
-                        sx={{ fontSize: "1.1rem", fontWeight: "500" }}
+                        sx={{ fontSize: "1rem", fontWeight: "500" }}
                       >
                         {item.name}
                       </Typography>

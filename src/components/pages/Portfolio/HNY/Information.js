@@ -31,7 +31,7 @@ function Information() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#454360" }}>
+      <Typography variant="h4" sx={{ fontWeight: "600", color: "#212121" }}>
         HNY App
       </Typography>
       <Box sx={{ marginTop: "40px" }}>

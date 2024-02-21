@@ -16,10 +16,10 @@ function Portfolio() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
-        Portfolio
+      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+        # Portfolio
       </Typography>
-      <Typography variant="body1" sx={{ color: "#8B88B1" }}>
+      <Typography variant="body1" sx={{ color: "grey" }}>
         Click on card to see my portfolio.
       </Typography>
       <Box sx={{ marginTop: "40px" }}>

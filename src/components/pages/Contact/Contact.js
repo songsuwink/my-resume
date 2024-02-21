@@ -19,10 +19,10 @@ function Contact() {
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#fff" }}>
-        Contact
+      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+        # Contact
       </Typography>
-      <Box sx={{ marginTop: "40px" }}>
+      <Box sx={{ marginTop: "24px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} lg={4}>
             <PaperStyled>
@@ -33,10 +33,16 @@ function Contact() {
                   />
                 </Grid>
                 <Grid item xs={9} md={9} lg={9}>
-                  <Typography variant="h6" sx={{ color: "#454360" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ color: "grey", fontSize: "1rem" }}
+                  >
                     Email
                   </Typography>
-                  <Typography variant="body1" sx={{ color: "#5E5C7F" }}>
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "#212121", fontWeight: "600" }}
+                  >
                     songsuwinkluey@gmail.com
                   </Typography>
                 </Grid>
@@ -52,10 +58,16 @@ function Contact() {
                   />
                 </Grid>
                 <Grid item xs={9} md={9} lg={9}>
-                  <Typography variant="h6" sx={{ color: "#454360" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ color: "grey", fontSize: "1rem" }}
+                  >
                     Facebook
                   </Typography>
-                  <Typography variant="body1" sx={{ color: "#5E5C7F" }}>
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "#212121", fontWeight: "600" }}
+                  >
                     Songsuwin Kluey Kamhaeng
                   </Typography>
                 </Grid>
