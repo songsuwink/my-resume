@@ -6,8 +6,11 @@ import QAInspector from "./QAInspector/QAInspector";
 import PPEStock from "./PPEStock/PPEStock";
 import OKRs from "./Okrs/Okrs";
 import Learning from "./Learning/Learning";
+import AntUni from "./AntUni/AntUniPage";
 import DWC from "./DWC/DWC";
 import HNY from "./HNY/HNY";
+import JTA_Revision from "./JTARevision/JTAPage";
+import EmpProfile from "./EmpProfile/EmpProfile";
 
 function Portfolio() {
   useEffect(() => {
@@ -38,6 +41,15 @@ function Portfolio() {
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <Learning />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <AntUni />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <JTA_Revision />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <EmpProfile />
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <DWC />

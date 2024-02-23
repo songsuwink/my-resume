@@ -27,11 +27,20 @@ const OKRs_Info = React.lazy(() =>
 const Learning_Info = React.lazy(() =>
   import("./components/pages/Portfolio/Learning/Information")
 );
+const AntUni_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/AntUni/Information")
+);
+const JTA_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/JTARevision/Information")
+);
 const DWC_Info = React.lazy(() =>
   import("./components/pages/Portfolio/DWC/Information")
 );
 const HNY_Info = React.lazy(() =>
   import("./components/pages/Portfolio/HNY/Information")
+);
+const EmpProfile_Info = React.lazy(() =>
+  import("./components/pages/Portfolio/EmpProfile/Information")
 );
 
 function Routers() {
@@ -51,6 +60,9 @@ function Routers() {
           <Route path="/learning-info" element={<Learning_Info />} />
           <Route path="/dwc-info" element={<DWC_Info />} />
           <Route path="hny-info" element={<HNY_Info />} />
+          <Route path="antUni-info" element={<AntUni_Info />} />
+          <Route path="jtaRevision-info" element={<JTA_Info />} />
+          <Route path="empProfile-info" element={<EmpProfile_Info />} />
         </Routes>
       </Suspense>
     </Container>

@@ -9,7 +9,7 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
-import image1 from "./images/hny2.jpeg";
+import image1 from "./images/aniuni1.png";
 
 const CardStyled = styled(Card)({
   borderRadius: "15px",
@@ -33,26 +33,26 @@ const ChipStyled = styled(Chip)({
   marginRight: "8px",
 });
 
-function HNY() {
+function AntUniPage() {
   return (
     <CardStyled
-      onClick={() => window.open("/hny-info", "_blank", "noreferrer")}
+      onClick={() => window.open("/antUni-info", "_blank", "noreferrer")}
     >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="150"
+          height="140"
           image={image1}
           alt="card image"
         />
         <CardContent>
           <Box sx={{ height: "100px" }}>
             <Typography gutterBottom variant="h5" component="div">
-              Happy new year
+              AntHR & UniHR
             </Typography>
             <Box sx={{ height: "60px" }}>
               <Typography variant="body2" color="text.secondary">
-                Web application for Happy new year Event.
+                Web application for HR Management.
               </Typography>
             </Box>
           </Box>
@@ -66,4 +66,4 @@ function HNY() {
   );
 }
 
-export default HNY;
+export default AntUniPage;
