@@ -15,11 +15,13 @@ const ButtonStyled = styled(Button)({
   borderRadius: "20px",
   backgroundColor: "#FF4C60",
   color: "#fff",
+  boxShadow: "none",
   padding: "8px 24px",
   fontWeight: "600",
   "&:hover": {
-    backgroundColor: "#FF4C60",
+    backgroundColor: "#fc3c51",
     color: "#fff",
+    boxShadow: "none",
   },
 });
 
@@ -227,7 +229,7 @@ function Home() {
                       variant="contained"
                       onClick={() => window.open(PDFCV)}
                     >
-                      Download CV
+                      Download Resume
                     </ButtonStyled>
                   </Box>
                 </Box>
