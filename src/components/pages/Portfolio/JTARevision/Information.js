@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useCallback } from "react";
-import ImageViewer from "react-simple-image-viewer";
-import image1 from "./images/jta1.png";
+import React, { useEffect, useState, useCallback } from 'react';
+import ImageViewer from 'react-simple-image-viewer';
+import image1 from './images/jta1.png';
+import image2 from './images/jta2.png';
+import image3 from './images/jta3.png';
 
-import { Box, Grid, Typography } from "@mui/material";
-import "../styles.css";
+import { Box, Grid, Typography } from '@mui/material';
+import '../styles.css';
 
-const images = [image1];
+const images = [image1, image2, image3];
 
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,23 +25,23 @@ function Information() {
 
   useEffect(() => {
     document.title =
-      "JTA Revision Information - My Resume | Songsuwin Kamhaeng";
+      'JTA Revision Information - My Resume | Songsuwin Kamhaeng';
   }, []);
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#212121" }}>
+      <Typography variant='h4' sx={{ fontWeight: '600', color: '#212121' }}>
         JTA Revision
       </Typography>
-      <Box sx={{ marginTop: "40px" }}>
-        <Grid container justifyContent="center">
+      <Box sx={{ marginTop: '40px' }}>
+        <Grid container justifyContent='center'>
           {images.map((item, index) => (
             <Grid item xs={10} md={10} lg={10} key={index}>
               <img
                 src={item}
-                alt=""
+                alt=''
                 onClick={() => openImageViewer(index)}
-                className="image-project"
+                className='image-project'
               />
             </Grid>
           ))}
