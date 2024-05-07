@@ -12,6 +12,13 @@ const PaperStyled = styled(Paper)({
   height: '100%',
 });
 
+const ContactBoxStyled = styled(Box)({
+  marginTop: '24px',
+  '& .MuiTypography-root': {
+    wordBreak: 'break-word',
+  },
+});
+
 function Contact() {
   useEffect(() => {
     document.title = 'Contact - My Resume | Songsuwin Kamhaeng';
@@ -22,7 +29,7 @@ function Contact() {
       <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         # Contact
       </Typography>
-      <Box sx={{ marginTop: '24px' }}>
+      <ContactBoxStyled>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} lg={4}>
             <PaperStyled>
@@ -77,7 +84,7 @@ function Contact() {
           </Grid>
            */}
         </Grid>
-      </Box>
+      </ContactBoxStyled>
     </div>
   );
 }
