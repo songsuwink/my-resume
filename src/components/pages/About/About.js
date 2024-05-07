@@ -11,6 +11,8 @@ import SQL from './images/big-data.png';
 import CSharp from './images/c-sharp.png';
 import git from './images/merge.png';
 import NodeJS from './images/nodejs.png';
+import Bootstrap from './images/bootstrap.png';
+import MUI from './images/mui.png';
 
 import VisualStudio from './images/visual-studio.png';
 import VisualStudioCode from './images/visual-studio-code-1.png';
@@ -57,6 +59,8 @@ const skills = [
   { id: 6, name: 'ASP.NET (C#)', image: CSharp },
   { id: 7, name: 'Git', image: git },
   { id: 8, name: 'NodeJS', image: NodeJS },
+  { id: 9, name: 'Bootstrap', image: Bootstrap },
+  { id: 10, name: 'Material UI', image: MUI },
 ];
 
 const tools = [
