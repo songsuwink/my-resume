@@ -1,31 +1,32 @@
-import React, { useEffect } from "react";
-import { styled } from "@mui/material/styles";
-import { Box, Grid, Typography } from "@mui/material";
-import ITStock from "./ITStock/ITStock";
-import QAInspector from "./QAInspector/QAInspector";
-import PPEStock from "./PPEStock/PPEStock";
-import OKRs from "./Okrs/Okrs";
-import Learning from "./Learning/Learning";
-import AntUni from "./AntUni/AntUniPage";
-import DWC from "./DWC/DWC";
-import HNY from "./HNY/HNY";
-import JTA_Revision from "./JTARevision/JTAPage";
-import EmpProfile from "./EmpProfile/EmpProfile";
+import React, { useEffect } from 'react';
+import { styled } from '@mui/material/styles';
+import { Box, Grid, Typography } from '@mui/material';
+import ITStock from './ITStock/ITStock';
+import QAInspector from './QAInspector/QAInspector';
+import PPEStock from './PPEStock/PPEStock';
+import OKRs from './Okrs/Okrs';
+import Learning from './Learning/Learning';
+import AntUni from './AntUni/AntUniPage';
+import DWC from './DWC/DWC';
+import HNY from './HNY/HNY';
+import JTA_Revision from './JTARevision/JTAPage';
+import EmpProfile from './EmpProfile/EmpProfile';
+import FamilyDay from './FamilyDay/FamilyDay';
 
 function Portfolio() {
   useEffect(() => {
-    document.title = "Portfolio - My Resume | Songsuwin Kamhaeng";
+    document.title = 'Portfolio - My Resume | Songsuwin Kamhaeng';
   }, []);
 
   return (
     <div>
-      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+      <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         # Portfolio
       </Typography>
-      <Typography variant="body1" sx={{ color: "grey" }}>
+      <Typography variant='body1' sx={{ color: 'grey' }}>
         Click on card to see my portfolio.
       </Typography>
-      <Box sx={{ marginTop: "40px" }}>
+      <Box sx={{ marginTop: '40px' }}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4} lg={4}>
             <ITStock />
@@ -56,6 +57,9 @@ function Portfolio() {
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <HNY />
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <FamilyDay />
           </Grid>
         </Grid>
       </Box>

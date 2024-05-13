@@ -126,7 +126,7 @@ function About() {
                 I am Songsuwin Kamhaeng, web developer from Rayong. I graduated
                 in Information Technology from Kasetsart University Sriracha
                 Campus. I have experience in website design and building
-                responsive website, I write CSS, HTML, JavaScript and ReactJS.
+                responsive website, I using CSS, HTML, Javascript and Reactjs.
               </Typography>
               <Typography align='right'>
                 <FormatQuoteIcon sx={{ fontSize: '40px' }} />

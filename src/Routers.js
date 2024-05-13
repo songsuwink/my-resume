@@ -48,6 +48,9 @@ const HNY_Info = React.lazy(() =>
 const EmpProfile_Info = React.lazy(() =>
   import('./components/pages/Portfolio/EmpProfile/Information')
 );
+const FamilyDay_Info = React.lazy(() =>
+  import('./components/pages/Portfolio/FamilyDay/Information')
+);
 
 function Routers() {
   return (
@@ -69,6 +72,7 @@ function Routers() {
           <Route path='antUni-info' element={<AntUni_Info />} />
           <Route path='jtaRevision-info' element={<JTA_Info />} />
           <Route path='empProfile-info' element={<EmpProfile_Info />} />
+          <Route path='familyDay-info' element={<FamilyDay_Info />} />
         </Routes>
       </Suspense>
     </ContainerStyled>
