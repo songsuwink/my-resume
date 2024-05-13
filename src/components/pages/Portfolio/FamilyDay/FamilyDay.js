@@ -16,6 +16,9 @@ const CardStyled = styled(Card)({
   boxShadow: '0px 5px 20px 0px rgba(69, 67, 96, 0.1)',
   backgroundColor: '#fff',
   height: '100%',
+  '& .MuiCardActionArea-root': {
+    height: '100%',
+  },
   '& .MuiTypography-h5': {
     fontWeight: '600',
     fontSize: '22px',
@@ -41,7 +44,7 @@ function FamilyDay() {
       <CardActionArea>
         <CardMedia
           component='img'
-          height='140'
+          height='150'
           image={image1}
           alt='card image'
         />

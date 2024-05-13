@@ -183,7 +183,7 @@ function About() {
             {tools.map((item) => (
               <Grid item xs={12} md={3} lg={3} key={item.id}>
                 <PaperSkillStyled>
-                  <Grid container alignItems='center'>
+                  <Grid container alignItems='center' spacing={2}>
                     <Grid item xs={12} md={4} lg={4}>
                       <Box
                         sx={{

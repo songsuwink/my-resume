@@ -10,7 +10,28 @@ import image8 from './images/familyDay8.png';
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
 
-const images = [image1, image2, image3, image4, image8, image5];
+const images = [
+  {
+    img: image1,
+    desc: 'Login page',
+  },
+  {
+    img: image2,
+    desc: 'Personal information from the questionnaire and QR Code for registering to participate in the activity.',
+  },
+  {
+    img: image3,
+    desc: 'Schedule of activities',
+  },
+  {
+    img: image4,
+    desc: 'Activities: Find landmarks and take photos to submit to a contest',
+  },
+  {
+    img: image5,
+    desc: 'Registration information for admins',
+  },
+];
 
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -32,19 +53,55 @@ function Information() {
 
   return (
     <div>
-      <Typography variant='h4' sx={{ fontWeight: '600', color: '#212121' }}>
+      <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         Family Day
       </Typography>
+      <Box sx={{ mt: 1 }}>
+        <Typography variant='body1'>
+          Web application for Family day Event, For registering to participate
+          in activities Schedule activities and photo sharing activities
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Backend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            Google Apps Script API create, modify to google sheet and google
+            drive
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Frontend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            Reactjs, Javascript and Material UI
+          </Typography>
+        </Box>
+      </Box>
       <Box sx={{ marginTop: '40px' }}>
         <Grid container justifyContent='center'>
           {images.map((item, index) => (
             <Grid item xs={10} md={10} lg={10} key={index}>
               <img
-                src={item}
+                src={item.img}
                 alt=''
                 onClick={() => openImageViewer(index)}
                 className='image-project'
               />
+              <Typography variant='subtitle1' sx={{ mb: 6 }}>
+                {item.desc}
+              </Typography>
             </Grid>
           ))}
         </Grid>

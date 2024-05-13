@@ -2,13 +2,22 @@ import React, { useEffect, useState, useCallback } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
-import image3 from './images/image3.png';
 import image4 from './images/image4.png';
 
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
 
-const images = [image1, image4, image2, image3];
+const images = [
+  {
+    img: image4,
+    desc: 'Dashboard showing JTA and training information of department.',
+  },
+  { img: image2, desc: 'Search and select to view employee information' },
+  {
+    img: image1,
+    desc: 'Detail information of employees in the organization',
+  },
+];
 
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -31,19 +40,67 @@ function Information() {
 
   return (
     <div>
-      <Typography variant='h4' sx={{ fontWeight: '600', color: '#212121' }}>
+      <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         Employee Profile
       </Typography>
+      <Box sx={{ mt: 1 }}>
+        <Typography variant='body1'>
+          Displaying JTA information and employee training information. Can view
+          the department or employees.
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Backend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            Nodejs
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Frontend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            Reactjs, Javascript and Material UI
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Database :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            SQL Server
+          </Typography>
+        </Box>
+      </Box>
       <Box sx={{ marginTop: '40px' }}>
         <Grid container justifyContent='center'>
           {images.map((item, index) => (
             <Grid item xs={10} md={10} lg={10} key={index}>
               <img
-                src={item}
+                src={item.img}
                 alt=''
                 onClick={() => openImageViewer(index)}
                 className='image-project'
               />
+              <Typography variant='subtitle1' sx={{ mb: 6 }}>
+                {item.desc}
+              </Typography>
             </Grid>
           ))}
         </Grid>

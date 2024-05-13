@@ -13,6 +13,25 @@ import JTA_Revision from './JTARevision/JTAPage';
 import EmpProfile from './EmpProfile/EmpProfile';
 import FamilyDay from './FamilyDay/FamilyDay';
 
+const portList = [
+  {
+    name: 'ITStock',
+    component: ITStock,
+  },
+  {
+    name: 'QAInspector',
+    component: QAInspector,
+  },
+  { name: 'PPEStock', component: PPEStock },
+  { name: 'OKRs', component: OKRs },
+  { name: 'AntUni', component: AntUni },
+  { name: 'JTA_Revision', component: JTA_Revision },
+  { name: 'EmpProfile', component: EmpProfile },
+  { name: 'DWC', component: DWC },
+  { name: 'HNY', component: HNY },
+  { name: 'FamilyDay', component: FamilyDay },
+];
+
 function Portfolio() {
   useEffect(() => {
     document.title = 'Portfolio - My Resume | Songsuwin Kamhaeng';
@@ -28,39 +47,11 @@ function Portfolio() {
       </Typography>
       <Box sx={{ marginTop: '40px' }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={4} lg={4}>
-            <ITStock />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <QAInspector />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <PPEStock />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <OKRs />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <Learning />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <AntUni />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <JTA_Revision />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <EmpProfile />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <DWC />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <HNY />
-          </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <FamilyDay />
-          </Grid>
+          {portList.map((port, index) => (
+            <Grid item xs={12} md={4} lg={4} key={index}>
+              <port.component />
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </div>

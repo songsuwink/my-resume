@@ -1,5 +1,5 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
+import React from 'react';
+import { styled } from '@mui/material/styles';
 import {
   Box,
   Card,
@@ -8,57 +8,60 @@ import {
   CardMedia,
   Chip,
   Typography,
-} from "@mui/material";
-import image1 from "./images/Capture2.PNG";
+} from '@mui/material';
+import image1 from './images/Capture2.PNG';
 
 const CardStyled = styled(Card)({
-  borderRadius: "15px",
-  boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
-  backgroundColor: "#fff",
-  height: "100%",
-  "& .MuiTypography-h5": {
-    fontWeight: "600",
-    fontSize: "22px",
-    color: "#212121",
+  borderRadius: '15px',
+  boxShadow: '0px 5px 20px 0px rgba(69, 67, 96, 0.1)',
+  backgroundColor: '#fff',
+  height: '100%',
+  '& .MuiCardActionArea-root': {
+    height: '100%',
   },
-  "& .MuiTypography-body2": {
-    color: "grey",
+  '& .MuiTypography-h5': {
+    fontWeight: '600',
+    fontSize: '22px',
+    color: '#212121',
+  },
+  '& .MuiTypography-body2': {
+    color: 'grey',
   },
 });
 
 const ChipStyled = styled(Chip)({
-  backgroundColor: "#eeeeee",
-  color: "#757575",
-  borderRadius: "5px",
-  marginRight: "8px",
+  backgroundColor: '#eeeeee',
+  color: '#757575',
+  borderRadius: '5px',
+  marginRight: '8px',
 });
 
 function PPEStock() {
   return (
     <CardStyled
-      onClick={() => window.open("/ppestock-info", "_blank", "noreferrer")}
+      onClick={() => window.open('/ppestock-info', '_blank', 'noreferrer')}
     >
       <CardActionArea>
         <CardMedia
-          component="img"
-          height="150"
+          component='img'
+          height='150'
           image={image1}
-          alt="card image"
+          alt='card image'
         />
         <CardContent>
-          <Box sx={{ height: "100px" }}>
-            <Typography gutterBottom variant="h5" component="div">
+          <Box sx={{ height: '100px' }}>
+            <Typography gutterBottom variant='h5' component='div'>
               PPE Stock
             </Typography>
-            <Box sx={{ height: "60px" }}>
-              <Typography variant="body2" color="text.secondary">
+            <Box sx={{ height: '60px' }}>
+              <Typography variant='body2' color='text.secondary'>
                 Web application for Safety Stock management.
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ marginTop: "20px" }}>
-            <ChipStyled label="ASP.NET" size="small" />
-            <ChipStyled label="C#" size="small" />
+          <Box sx={{ marginTop: '20px' }}>
+            <ChipStyled label='ASP.NET' size='small' />
+            <ChipStyled label='C#' size='small' />
           </Box>
         </CardContent>
       </CardActionArea>

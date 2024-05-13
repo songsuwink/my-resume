@@ -1,13 +1,30 @@
-import React, { useEffect, useState, useCallback } from "react";
-import ImageViewer from "react-simple-image-viewer";
-import image1 from "./images/Capture1.png";
-import image2 from "./images/Capture2.png";
-import image3 from "./images/Capture5.png";
-import image4 from "./images/Capture8.png";
-import { Box, Grid, Typography } from "@mui/material";
-import "../styles.css";
+import React, { useEffect, useState, useCallback } from 'react';
+import ImageViewer from 'react-simple-image-viewer';
+import image1 from './images/Capture1.png';
+import image2 from './images/Capture2.png';
+import image3 from './images/Capture5.png';
+import image4 from './images/Capture8.png';
+import { Box, Grid, Typography } from '@mui/material';
+import '../styles.css';
 
-const images = [image1, image2, image3, image4];
+const images = [
+  {
+    img: image1,
+    desc: 'All employee information in production line',
+  },
+  {
+    img: image2,
+    desc: 'Select employees to submit names for theory or practical exams',
+  },
+  {
+    img: image3,
+    desc: 'Example of how the theory test works in the system',
+  },
+  {
+    img: image4,
+    desc: 'Example practical examination',
+  },
+];
 
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -25,24 +42,72 @@ function Information() {
 
   useEffect(() => {
     document.title =
-      "QA Inspector Information - My Resume | Songsuwin Kamhaeng";
+      'QA Inspector Information - My Resume | Songsuwin Kamhaeng';
   }, []);
 
   return (
     <div>
-      <Typography variant="h4" sx={{ fontWeight: "600", color: "#212121" }}>
+      <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         QA Inspector
       </Typography>
-      <Box sx={{ marginTop: "40px" }}>
-        <Grid container justifyContent="center">
+      <Box sx={{ mt: 1 }}>
+        <Typography variant='body1'>
+          Web application for QA to be used in the examination of employees in
+          the production line.
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Backend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            ASP.NET MVC (C#)
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Frontend :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            HTML, CSS, Javascript and Bootstrap
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='body1'
+            fontWeight='600'
+            display='inline'
+            sx={{ mr: 1 }}
+          >
+            Database :
+          </Typography>
+          <Typography variant='body1' display='inline'>
+            SQL Server
+          </Typography>
+        </Box>
+      </Box>
+      <Box sx={{ marginTop: '40px' }}>
+        <Grid container justifyContent='center'>
           {images.map((item, index) => (
             <Grid item xs={10} md={10} lg={10} key={index}>
               <img
-                src={item}
-                alt=""
+                src={item.img}
+                alt=''
                 onClick={() => openImageViewer(index)}
-                className="image-project"
+                className='image-project'
               />
+              <Typography variant='subtitle1' sx={{ mb: 6 }}>
+                {item.desc}
+              </Typography>
             </Grid>
           ))}
         </Grid>
