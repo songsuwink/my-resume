@@ -9,6 +9,9 @@ const ContainerStyled = styled(Container)({
 });
 
 const Homepage = React.lazy(() => import('./components/pages/Home/Home'));
+const PageNotFound = React.lazy(() =>
+  import('./components/pages/PageNotFound')
+);
 const Resume = React.lazy(() => import('./components/pages/Resume/Resume'));
 const Experience = React.lazy(() =>
   import('./components/pages/Experience/Experience')
@@ -19,7 +22,7 @@ const Portfolio = React.lazy(() =>
   import('./components/pages/Portfolio/Portfolio')
 );
 const ITStock_Info = React.lazy(() =>
-  import('./components/pages/Portfolio/ITStock/Infomation')
+  import('./components/pages/Portfolio/ITStock/Information')
 );
 const QAInspector_Info = React.lazy(() =>
   import('./components/pages/Portfolio/QAInspector/Information')
@@ -58,6 +61,7 @@ function Routers() {
       <Suspense fallback={<div style={{ color: '#fff' }}>Loading...</div>}>
         <Routes>
           <Route path='/' element={<Homepage />} />
+          <Route path='*' element={<PageNotFound />} />
           <Route path='/experience' element={<Experience />} />
           <Route path='/about-me' element={<About />} />
           <Route path='/contact' element={<Contact />} />

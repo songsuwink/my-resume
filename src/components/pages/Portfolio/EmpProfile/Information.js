@@ -3,9 +3,9 @@ import ImageViewer from 'react-simple-image-viewer';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
 import image4 from './images/image4.png';
-
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
+import PortList from '../PortList';
 
 const images = [
   {
@@ -22,6 +22,7 @@ const images = [
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [port, setPort] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -36,18 +37,17 @@ function Information() {
   useEffect(() => {
     document.title =
       'Employee Profile Information - My Resume | Songsuwin Kamhaeng';
+    const getPortData = PortList.find((port) => port.id === 7);
+    setPort(getPortData);
   }, []);
 
   return (
     <div>
       <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-        Employee Profile
+        {port.name}
       </Typography>
       <Box sx={{ mt: 1 }}>
-        <Typography variant='body1'>
-          Displaying JTA information and employee training information. Can view
-          the department or employees.
-        </Typography>
+        <Typography variant='body1'>{port.desc}</Typography>
         <Box sx={{ mt: 2 }}>
           <Typography
             variant='body1'

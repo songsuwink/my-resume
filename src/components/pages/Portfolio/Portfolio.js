@@ -1,36 +1,7 @@
 import React, { useEffect } from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Grid, Typography } from '@mui/material';
-import ITStock from './ITStock/ITStock';
-import QAInspector from './QAInspector/QAInspector';
-import PPEStock from './PPEStock/PPEStock';
-import OKRs from './Okrs/Okrs';
-import Learning from './Learning/Learning';
-import AntUni from './AntUni/AntUniPage';
-import DWC from './DWC/DWC';
-import HNY from './HNY/HNY';
-import JTA_Revision from './JTARevision/JTAPage';
-import EmpProfile from './EmpProfile/EmpProfile';
-import FamilyDay from './FamilyDay/FamilyDay';
-
-const portList = [
-  {
-    name: 'ITStock',
-    component: ITStock,
-  },
-  {
-    name: 'QAInspector',
-    component: QAInspector,
-  },
-  { name: 'PPEStock', component: PPEStock },
-  { name: 'OKRs', component: OKRs },
-  { name: 'AntUni', component: AntUni },
-  { name: 'JTA_Revision', component: JTA_Revision },
-  { name: 'EmpProfile', component: EmpProfile },
-  { name: 'DWC', component: DWC },
-  { name: 'HNY', component: HNY },
-  { name: 'FamilyDay', component: FamilyDay },
-];
+import PortCard from './PortCard';
+import PortList from './PortList';
 
 function Portfolio() {
   useEffect(() => {
@@ -43,13 +14,20 @@ function Portfolio() {
         # Portfolio
       </Typography>
       <Typography variant='body1' sx={{ color: 'grey' }}>
-        Click on card to see my portfolio.
+        Click on the card to view my portfolio.
       </Typography>
       <Box sx={{ marginTop: '40px' }}>
         <Grid container spacing={4}>
-          {portList.map((port, index) => (
-            <Grid item xs={12} md={4} lg={4} key={index}>
-              <port.component />
+          {PortList.map((port) => (
+            <Grid item xs={12} md={4} lg={4} key={port.id}>
+              <PortCard
+                name={port.name}
+                desc={port.desc}
+                cardImg={port.img}
+                tag1={port.tag1}
+                tag2={port.tag2}
+                route={port.route}
+              />
             </Grid>
           ))}
         </Grid>

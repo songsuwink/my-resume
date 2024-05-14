@@ -6,9 +6,9 @@ import image3 from './images/familyDay3.png';
 import image4 from './images/familyDay4.png';
 import image5 from './images/familyDay5.png';
 import image8 from './images/familyDay8.png';
-
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
+import PortList from '../PortList';
 
 const images = [
   {
@@ -36,6 +36,7 @@ const images = [
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [port, setPort] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -49,18 +50,17 @@ function Information() {
 
   useEffect(() => {
     document.title = 'Family Day Information - My Resume | Songsuwin Kamhaeng';
+    const getPortData = PortList.find((port) => port.id === 10);
+    setPort(getPortData);
   }, []);
 
   return (
     <div>
       <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-        Family Day
+        {port.name}
       </Typography>
       <Box sx={{ mt: 1 }}>
-        <Typography variant='body1'>
-          Web application for Family day Event, For registering to participate
-          in activities Schedule activities and photo sharing activities
-        </Typography>
+        <Typography variant='body1'>{port.desc}</Typography>
         <Box sx={{ mt: 2 }}>
           <Typography
             variant='body1'

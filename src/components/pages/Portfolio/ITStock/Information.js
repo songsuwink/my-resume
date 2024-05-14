@@ -6,6 +6,7 @@ import image3 from './images/5.PNG';
 import image4 from './images/6.PNG';
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
+import PortList from '../PortList';
 
 const images = [
   {
@@ -26,9 +27,10 @@ const images = [
   },
 ];
 
-function Infomation() {
+function Information() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [port, setPort] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -42,17 +44,17 @@ function Infomation() {
 
   useEffect(() => {
     document.title = 'IT Stock Information - My Resume | Songsuwin Kamhaeng';
+    const getPortData = PortList.find((port) => port.id === 1);
+    setPort(getPortData);
   }, []);
 
   return (
     <div>
       <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-        IT Stock
+        {port.name}
       </Typography>
-      <Box sx={{ marginTop: '40px' }}>
-        <Typography variant='body1'>
-          Web application for IT Stock management.
-        </Typography>
+      <Box sx={{ mt: 1 }}>
+        <Typography variant='body1'>{port.desc}</Typography>
         <Box sx={{ mt: 2 }}>
           <Typography
             variant='body1'
@@ -123,4 +125,4 @@ function Infomation() {
   );
 }
 
-export default Infomation;
+export default Information;

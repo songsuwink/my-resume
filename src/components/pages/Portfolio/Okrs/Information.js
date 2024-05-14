@@ -4,6 +4,7 @@ import image1 from './images/okrs1.png';
 import image2 from './images/okrs2.png';
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
+import PortList from '../PortList';
 
 const images = [
   {
@@ -19,6 +20,7 @@ const images = [
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [port, setPort] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -32,18 +34,17 @@ function Information() {
 
   useEffect(() => {
     document.title = 'OKRs Information - My Resume | Songsuwin Kamhaeng';
+    const getPortData = PortList.find((port) => port.id === 4);
+    setPort(getPortData);
   }, []);
 
   return (
     <div>
       <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-        OKRs
+        {port.name}
       </Typography>
       <Box sx={{ mt: 1 }}>
-        <Typography variant='body1'>
-          Goal-setting framework used by individuals and teams to define
-          measurable goals and track their outcomes
-        </Typography>
+        <Typography variant='body1'>{port.desc}</Typography>
         <Box sx={{ mt: 2 }}>
           <Typography
             variant='body1'

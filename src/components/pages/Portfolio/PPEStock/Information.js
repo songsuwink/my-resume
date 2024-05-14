@@ -6,6 +6,7 @@ import image3 from './images/Capture4.PNG';
 import image4 from './images/Capture5.PNG';
 import { Box, Grid, Typography } from '@mui/material';
 import '../styles.css';
+import PortList from '../PortList';
 
 const images = [
   {
@@ -29,6 +30,7 @@ const images = [
 function Information() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [port, setPort] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -42,17 +44,17 @@ function Information() {
 
   useEffect(() => {
     document.title = 'PPE Stock Information - My Resume | Songsuwin Kamhaeng';
+    const getPortData = PortList.find((port) => port.id === 3);
+    setPort(getPortData);
   }, []);
 
   return (
     <div>
       <Typography variant='h4' sx={{ fontWeight: '600', color: '#212121' }}>
-        PPE Stock
+        {port.name}
       </Typography>
       <Box sx={{ mt: 1 }}>
-        <Typography variant='body1'>
-          Web application for Safety Stock management.
-        </Typography>
+        <Typography variant='body1'>{port.desc}</Typography>
         <Box sx={{ mt: 2 }}>
           <Typography
             variant='body1'
