@@ -34,6 +34,18 @@ const ChipStyled = styled(Chip)({
   color: '#757575',
   borderRadius: '5px',
   marginRight: '8px',
+  '&.aspnet-mvc': {
+    backgroundColor: '#ede7f6',
+    color: '#7c4dff',
+  },
+  '&.react': {
+    backgroundColor: '#e8eaf6',
+    color: '#536dfe',
+  },
+  '&.javascript': {
+    backgroundColor: '#fff8e1',
+    color: '#ffab00',
+  },
 });
 
 function PortCard(props) {
@@ -66,8 +78,26 @@ function PortCard(props) {
               </Box>
             </Box>
             <Box sx={{ marginTop: '20px' }}>
-              {tag1 && <ChipStyled label={tag1} size='small' />}
-              {tag2 && <ChipStyled label={tag2} size='small' />}
+              {tag1 && (
+                <ChipStyled
+                  label={tag1}
+                  size='small'
+                  className={
+                    tag1 === 'ASP.NET MVC'
+                      ? 'aspnet-mvc'
+                      : tag1 === 'React'
+                      ? 'react'
+                      : ''
+                  }
+                />
+              )}
+              {tag2 && (
+                <ChipStyled
+                  label={tag2}
+                  size='small'
+                  className={tag2 === 'Javascript' ? 'javascript' : ''}
+                />
+              )}
             </Box>
           </CardContent>
         </Link>
