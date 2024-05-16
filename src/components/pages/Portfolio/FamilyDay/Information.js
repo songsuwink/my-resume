@@ -20,6 +20,10 @@ const images = [
     desc: 'Personal information from the questionnaire and QR Code for registering to participate in the activity.',
   },
   {
+    img: image8,
+    desc: `Before entering the activity, scan and register with the employee's QR Code.`,
+  },
+  {
     img: image3,
     desc: 'Schedule of activities',
   },
