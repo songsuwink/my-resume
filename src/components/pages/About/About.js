@@ -52,7 +52,7 @@ const skills = [
   },
   {
     id: 4,
-    name: 'React',
+    name: 'ReactJS',
     image: ReactImg,
   },
   { id: 5, name: 'SQL', image: SQL },
