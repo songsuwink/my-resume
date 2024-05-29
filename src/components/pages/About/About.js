@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import Profile1 from '../../images/Profile1.jpg';
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
+import SkillType from './SkillType.js';
+
 import UXUIDesign from './images/paint-palette.png';
 import CSSHTML from './images/coding.png';
 import Js from './images/javascript.png';
@@ -19,6 +20,11 @@ import VisualStudioCode from './images/visual-studio-code-1.png';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import Office from './images/office.png';
 import Photoshop from './images/photoshop.png';
+import SQLServer from './images/sql-server.png';
+import MongoDB from './images/mongoDB.png';
+import ProblemSolving from './images/problem-solving.png';
+import TimeManagement from './images/time-management.png';
+import ResponsiveDesign from './images/responsive-design.png';
 
 const PaperSkillStyled = styled(Paper)({
   borderRadius: '15px',
@@ -34,33 +40,30 @@ const PaperSkillStyled = styled(Paper)({
   alignItems: 'center',
 });
 
-const skills = [
+const programmingLanguages = [
   {
     id: 1,
-    name: 'UX/UI Design',
-    image: UXUIDesign,
-  },
-  {
-    id: 2,
-    name: 'CSS/HTML',
+    name: 'HTML/CSS',
     image: CSSHTML,
   },
+  { id: 2, name: 'ASP.NET (C#)', image: CSharp },
+  { id: 3, name: 'SQL', image: SQL },
   {
-    id: 3,
+    id: 4,
     name: 'Javascript',
     image: Js,
   },
+];
+
+const frameworkLibraries = [
   {
-    id: 4,
+    id: 1,
     name: 'ReactJS',
     image: ReactImg,
   },
-  { id: 5, name: 'SQL', image: SQL },
-  { id: 6, name: 'ASP.NET (C#)', image: CSharp },
-  { id: 7, name: 'Git', image: git },
-  { id: 8, name: 'NodeJS', image: NodeJS },
-  { id: 9, name: 'Bootstrap', image: Bootstrap },
-  { id: 10, name: 'Material UI', image: MUI },
+  { id: 2, name: 'NodeJS', image: NodeJS },
+  { id: 3, name: 'Bootstrap', image: Bootstrap },
+  { id: 4, name: 'Material UI', image: MUI },
 ];
 
 const tools = [
@@ -72,6 +75,43 @@ const tools = [
   { id: 2, name: 'Visual Studio Code', image: VisualStudioCode },
   { id: 3, name: 'Microsoft Office', image: Office },
   { id: 4, name: 'Adobe Photoshop', image: Photoshop },
+  { id: 5, name: 'Git', image: git },
+];
+
+const databases = [
+  {
+    id: 1,
+    name: 'SQL Server',
+    image: SQLServer,
+  },
+  {
+    id: 2,
+    name: 'MongoDB (Basic)',
+    image: MongoDB,
+  },
+];
+
+const skills = [
+  {
+    id: 1,
+    name: 'UX/UI Design',
+    image: UXUIDesign,
+  },
+  {
+    id: 2,
+    name: 'Responsive Design',
+    image: ResponsiveDesign,
+  },
+  {
+    id: 3,
+    name: 'Problem Solving',
+    image: ProblemSolving,
+  },
+  {
+    id: 4,
+    name: 'Time Management',
+    image: TimeManagement,
+  },
 ];
 
 function About() {
@@ -119,14 +159,14 @@ function About() {
                   fontWeight: '500',
                   marginTop: '8px',
                   marginBottom: '16px',
-                  paddingLeft: '32px',
-                  paddingRight: '32px',
+                  paddingLeft: '16px',
+                  paddingRight: '16px',
                 }}
               >
                 I am Songsuwin Kamhaeng, web developer from Rayong. I graduated
                 in Information Technology from Kasetsart University Sriracha
                 Campus. I have experience in website design and building
-                responsive website, I using CSS, HTML, Javascript and Reactjs.
+                responsive website, I using HTML/CSS, Javascript and Reactjs.
               </Typography>
               <Typography align='right'>
                 <FormatQuoteIcon sx={{ fontSize: '40px' }} />
@@ -136,82 +176,25 @@ function About() {
         </Grid>
       </Box>
       <Box sx={{ marginTop: '80px' }}>
-        <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-          Skill
-        </Typography>
-        <Box sx={{ marginTop: '20px' }}>
-          <Grid container spacing={2}>
-            {skills.map((item) => (
-              <Grid item xs={12} md={3} lg={3} key={item.id}>
-                <PaperSkillStyled>
-                  <Grid container alignItems='center' spacing={2}>
-                    <Grid item xs={12} md={4} lg={4}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                        }}
-                      >
-                        <img
-                          src={item.image}
-                          alt='image'
-                          style={{ width: '35px', height: '35px' }}
-                        />
-                      </Box>
-                    </Grid>
-                    <Grid item xs={12} md={8} lg={8}>
-                      <Typography
-                        align='center'
-                        sx={{ fontSize: '1rem', fontWeight: '500' }}
-                      >
-                        {item.name}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </PaperSkillStyled>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        <SkillType
+          typeName='Programming Languages'
+          typeList={programmingLanguages}
+        />
       </Box>
       <Box sx={{ marginTop: '50px' }}>
-        <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
-          Tools
-        </Typography>
-        <Box sx={{ marginTop: '20px' }}>
-          <Grid container spacing={2}>
-            {tools.map((item) => (
-              <Grid item xs={12} md={3} lg={3} key={item.id}>
-                <PaperSkillStyled>
-                  <Grid container alignItems='center' spacing={2}>
-                    <Grid item xs={12} md={4} lg={4}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                        }}
-                      >
-                        <img
-                          src={item.image}
-                          alt='image'
-                          style={{ width: '35px', height: '35px' }}
-                        />
-                      </Box>
-                    </Grid>
-                    <Grid item xs={12} md={8} lg={8}>
-                      <Typography
-                        align='center'
-                        sx={{ fontSize: '1rem', fontWeight: '500' }}
-                      >
-                        {item.name}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </PaperSkillStyled>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        <SkillType
+          typeName='Framework / Libraries'
+          typeList={frameworkLibraries}
+        />
+      </Box>
+      <Box sx={{ marginTop: '50px' }}>
+        <SkillType typeName='Databases' typeList={databases} />
+      </Box>
+      <Box sx={{ marginTop: '50px' }}>
+        <SkillType typeName='Tools' typeList={tools} />
+      </Box>
+      <Box sx={{ marginTop: '50px' }}>
+        <SkillType typeName='Skills' typeList={skills} />
       </Box>
     </div>
   );

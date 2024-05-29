@@ -9,7 +9,7 @@ import Experience from '../Experience/Experience';
 import Contact from '../Contact/Contact';
 import Portfolio from '../Portfolio/Portfolio';
 import { styled } from '@mui/material/styles';
-import PDFCV from './files/Songsuwin_Kamhaeng_Resume.pdf';
+import PDFCV from './files/Songsuwin_Kamhaeng_CV.pdf';
 
 const InfoBoxStyled = styled(Box)({
   backgroundColor: '#fafafa',
