@@ -1,63 +1,63 @@
-import React, { useEffect } from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import makeStyles from "@mui/styles/makeStyles";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import React, { useEffect } from 'react';
+import { Box, Grid, Paper, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import makeStyles from '@mui/styles/makeStyles';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 
 const PaperStyled = styled(Paper)({
-  backgroundColor: "#fafafa",
-  borderRadius: "20px",
-  boxShadow: "0px 5px 20px 0px rgba(69, 67, 96, 0.1)",
-  padding: "24px",
-  height: "100%",
+  backgroundColor: '#fafafa',
+  borderRadius: '20px',
+  boxShadow: '0px 5px 20px 0px rgba(69, 67, 96, 0.1)',
+  padding: '24px',
+  height: '100%',
 });
 
 const useStyles = makeStyles({
   timeline: {
-    "& .MuiTimelineConnector-root": {
-      backgroundColor: "#FF4C60",
+    '& .MuiTimelineConnector-root': {
+      backgroundColor: '#FF4C60',
     },
   },
   timelineYear: {
-    color: "grey",
-    fontSize: "14px",
-    marginBottom: "8px",
+    color: 'grey',
+    fontSize: '14px',
+    marginBottom: '8px',
   },
   timelineType: {
-    color: "#212121",
-    fontSize: "20px",
-    fontWeight: "600",
+    color: '#212121',
+    fontSize: '20px',
+    fontWeight: '600',
   },
   timelineDes: {
-    color: "#212121",
-    fontSize: "15px",
+    color: '#212121',
+    fontSize: '15px',
   },
   gpa: {
-    color: "#212121",
-    fontSize: "14px",
+    color: '#212121',
+    fontSize: '14px',
   },
   timelineEdu: {
-    color: "#212121",
-    fontSize: "15px",
-    marginBottom: "8px",
+    color: '#212121',
+    fontSize: '15px',
+    marginBottom: '8px',
   },
   timelineCompany: {
-    color: "#212121",
-    fontSize: "15px",
-    marginBottom: "8px",
+    color: '#212121',
+    fontSize: '15px',
+    marginBottom: '8px',
   },
   educationIcon: {
-    color: "#FF4C60",
-    fontSize: "28px",
-    marginTop: "5px",
-    marginBottom: "5px",
+    color: '#FF4C60',
+    fontSize: '28px',
+    marginTop: '5px',
+    marginBottom: '5px',
   },
 });
 
@@ -65,15 +65,15 @@ function Experience() {
   const classes = useStyles();
 
   useEffect(() => {
-    document.title = "Experience - My Resume | Songsuwin Kamhaeng";
+    document.title = 'Experience - My Resume | Songsuwin Kamhaeng';
   }, []);
 
   return (
     <div>
-      <Typography variant="h5" sx={{ fontWeight: "600", color: "#212121" }}>
+      <Typography variant='h5' sx={{ fontWeight: '600', color: '#212121' }}>
         # Experience
       </Typography>
-      <Box sx={{ marginTop: "24px" }}>
+      <Box sx={{ marginTop: '24px' }}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6} lg={6}>
             <PaperStyled>
@@ -102,7 +102,7 @@ function Experience() {
                       Klaeng Wittayasathaworn School
                     </Typography>
                     <Typography className={classes.gpa}>GPA : 3.30</Typography>
-                    <Box sx={{ marginBottom: "40px" }}></Box>
+                    <Box sx={{ marginBottom: '40px' }}></Box>
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -124,7 +124,7 @@ function Experience() {
                       Information Technology
                     </Typography>
                     <Typography className={classes.gpa}>GPA : 2.84</Typography>
-                    <Box sx={{ marginBottom: "40px" }}></Box>
+                    <Box sx={{ marginBottom: '40px' }}></Box>
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>
@@ -162,7 +162,7 @@ function Experience() {
                       Developed web application for production line with ASP.NET
                       C#
                     </Typography>
-                    <Box sx={{ marginBottom: "40px" }}></Box>
+                    <Box sx={{ marginBottom: '40px' }}></Box>
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -183,9 +183,9 @@ function Experience() {
                       Thai Polyethylene Co., Ltd. (TPE)
                     </Typography>
                     <Typography className={classes.timelineDes}>
-                      Developed web application HR Management with React.js
+                      Developed web application for HR Management with React.js
                     </Typography>
-                    <Box sx={{ marginBottom: "40px" }}></Box>
+                    <Box sx={{ marginBottom: '40px' }}></Box>
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>
